@@ -66,7 +66,8 @@ class _MyAppState extends State<MyApp> {
             });
           } else{
             setState(() {
-              _displaySCDF = false;
+              //_displaySCDF = false;
+              _displaySCDF = true;
             });
           }
         }

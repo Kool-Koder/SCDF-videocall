@@ -1,0 +1,147 @@
+.videoGrid {
+  display: flex;
+  justify-content: center;
+}
+video {
+  height: 300px;
+  width: 400px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.main {
+  display: flex;
+  height: 92.5vh;
+  margin: 0;
+  padding: 0;
+}
+.main_videos {
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background-color: rgb(32, 33, 36);
+}
+.main_controls {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(32, 33, 36);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meeting_id {
+  padding: 30px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+}
+
+.main_middle_controls {
+  display: flex;
+}
+
+.button {
+  display: flex;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: rgb(61, 64, 67);
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.right-button {
+  justify-content: space-evenly;
+  display: flex;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.main_right_controls {
+  display: flex;
+  margin-right: 15px;
+}
+
+.main_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_message_input_container {
+  display: flex;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  padding: auto;
+  width: 330px;
+  height: 35px;
+  background-color: rgb(241, 243, 244);
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(155, 160, 165);
+}
+
+input {
+  flex-grow: 1;
+  display: flex;
+  flex: 0.9;
+  outline: none;
+  padding: 1px 0;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 14px;
+  margin-left: 10px;
+}
+#send {
+  display: flex;
+  flex: 0.1;
+}
+
+.chat-heading {
+  display: flex;
+  flex-direction: column;
+}
+.main_heading {
+  margin: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.chat_header {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  display: flex;
+}
+.chat_info {
+  margin: 10px;
+  padding: 15px;
+  text-align: center;
+  background-color: rgb(241, 243, 244);
+  border-radius: 10px;
+  display: flex;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  line-height: 15px;
+  color: black;
+}
+
+li {
+  background-color: rgb(241, 243, 244);
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+}

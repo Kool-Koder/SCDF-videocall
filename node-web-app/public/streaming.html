@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Video Call Portal</title>
+	<link rel="stylesheet" href="./stylesheets/gmeetsroom.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+	</script>
+	<script src="https://kit.fontawesome.com/d2c32395cb.js" crossorigin="anonymous">
+
+	</script>
+</head>
+<body>
+  <form id="join-form" style="display: none;">
+			<div class="row join-info-group">
+				<div class="col-sm">
+					<p class="join-info-text">AppID</p>
+					<input id="appid" type="text" placeholder="enter appid" value="a991c309dd9b4466b7affb978e742b87" required>
+            <p class="tips">If you don`t know what is your appid, checkout <a href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#a-nameappidaapp-id">this</a></p>
+          </div>
+          <div class="col-sm">
+            <p class="join-info-text">Token(optional)</p>
+            <input id="token" type="text" placeholder="enter token">
+            <p class="tips">If you don`t know what is your token, checkout <a href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#a-namekeyadynamic-key">this</a></p>
+          </div>
+          <div class="col-sm">
+            <p class="join-info-text">Channel</p>
+            <input id="channel" type="text" placeholder="enter channel name" required>
+            <p class="tips">If you don`t know what is your channel, checkout <a href="https://docs.agora.io/en/Agora%20Platform/terms?platform=All%20Platforms#channel">this</a></p>
+          </div>
+          <div class="col-sm">
+            <p class="join-info-text">User ID(optional)</p>
+            <input id="uid" type="text" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" placeholder="Enter the user ID">
+          </div>
+      </div>
+      <div class="button-group">
+        <button id="join" type="submit" class="btn btn-primary btn-sm" style="display: none;">Join</button>
+      </div>
+    </form>
+	<div class="main">
+			<div class="main_videos">
+				<div id ="remoteViews" class="videoGrid">
+        </div>
+        <div id ="localView" class="videoGrid" style="display: none;">
+        </div>
+		</div>
+	</div>
+      <div class="main_controls">
+      <div class="meeting_id"></div>
+      <div class="main_middle_controls">
+        <i id="mute-audio" class="button fas fa-microphone fa-lg"></i>
+        <i id="mute-video" class="button fas fa-video fa-lg"></i>
+        <i id="leave"style="background-color: rgb(217, 81, 64)"class="button fas fa-phone-alt fa-lg"></i>
+      </div>
+      <div class="main_right_controls">
+      </div>
+    </div>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="https://download.agora.io/sdk/release/AgoraRTC_N.js"></script>
+  <script src="./javascripts/streaming.js"></script>
+  <script>
+  </script>
+</body>
+</html>

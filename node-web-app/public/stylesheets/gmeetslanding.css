@@ -1,0 +1,223 @@
+:root {
+  --dark: rgba(0, 0, 0, 0.87);
+  --gray: #5f6368;
+  --blue: #1a73e8;
+  --blue-darker: #1b66c8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  color: var(--dark);
+}
+
+nav {
+  height: 64px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  color: var(--gray);
+  gap: 1px;
+}
+
+.logo {
+  display: flex;
+  height: 100%;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.logo-img {
+  margin-bottom: -3px;
+}
+
+.logo-txt {
+  font-size: 21px;
+  align-self: center;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 9px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.circle:hover {
+  background-color: rgba(98, 98, 98, 0.1);
+}
+
+.pfp {
+  border-radius: 50%;
+  height: 100%;
+  margin: 0 5px;
+}
+
+.main-container {
+  padding: 10vw;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  gap: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.subtitle {
+  color: var(--gray);
+}
+
+.forms {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.rounded {
+  border-radius: 5px;
+  height: 48px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.new-meeting {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: var(--blue);
+  color: white;
+  width: 150px;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.new-meeting:hover {
+  background: var(--blue-darker);
+}
+
+.join-meeting {
+  display: flex;
+  gap: 15px;
+}
+
+.meet-code {
+  display: flex;
+  border: 1px solid #aaa;
+  padding: 0 5px;
+  color: var(--gray);
+}
+
+.meet-code span {
+  align-self: center;
+  padding: 0 10px;
+}
+
+.meet-code > input {
+  outline: none;
+  border: none;
+  color: var(--dark);
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+.meet-code:hover {
+  border: 1px solid var(--gray);
+}
+
+.meet-code:focus-within {
+  border: 1px solid var(--blue);
+  box-shadow: 1px 0 var(--blue), -1px 0 var(--blue), 0 1px var(--blue),
+    0 -1px var(--blue);
+}
+
+.join-meeting .join {
+  border: none;
+  background: transparent;
+  color: var(--blue);
+  cursor: pointer;
+}
+
+.join-meeting .join:disabled {
+  cursor: default;
+  color: var(--gray);
+}
+
+.meet-code:not(:focus-within) + .hidden {
+  opacity: 0;
+}
+
+.promos {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.promo-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.img-row {
+  display: flex;
+  align-items: center;
+}
+
+.img-row img {
+  padding: 20px 5px;
+  max-height: 370px;
+  object-fit: contain;
+}
+
+.promo-title {
+  font-size: 24px;
+}
+
+.promo-subtitle {
+  max-width: 340px;
+  align-self: center;
+  font-size: 15px;
+}
+
+.slide-0 .prev-slide,
+.slide-3 .next-slide {
+  pointer-events: none;
+  color: rgba(98, 98, 98, 0.4);
+}
+
+@media screen and (max-width: 1000px) {
+  .main-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
